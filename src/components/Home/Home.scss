@@ -1,0 +1,141 @@
+@import '../../common/colors.scss';
+
+.home{
+    display:flex;
+    flex-direction: row;
+    background-color: rgb(116, 168, 172);
+}
+.heading-div{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:30px;
+
+}
+.heading{
+    font-size: 45px;
+    font-weight: 800;
+}
+.text{
+    font-size: 20px;
+    font-weight: 500;
+}
+.banner-img,.banner-img img{
+    display:flex;
+    align-items: flex-end;
+    height:500px;
+}
+hr.solid{
+    border: 3px solid $secondary-color;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.watch-btn {
+    margin:10px;
+    padding:7px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 10px;
+    background-color: $secondary-color;
+    color:$font-primary;
+    transition: all 0.2s ease-in-out;
+    border: none;
+}
+.watch-btn:hover{
+    background-color: $teritary-color;
+    color:black;
+    transition: all 0.2s ease-in-out;
+}
+
+//rgb(105, 167, 172);
+
+@media only screen and (max-width: 1300px) and (min-width : 1100px) {
+    .banner-img,.banner-img img{
+        display:flex;
+        align-items: flex-end;
+        height: 400px;
+    }
+    .heading{
+        font-size: 40px;
+        font-weight: 800;
+    }
+    .text{
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
+@media only screen and (max-width: 1100px) and (min-width : 900px) {
+    .banner-img,.banner-img img{
+        display:flex;
+        align-items: flex-end;
+        justify-content: center;
+        height: 300px;
+    }
+    .heading{
+        font-size: 40px;
+        font-weight: 800;
+    }
+    .text{
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+@media only screen and (max-width: 900px) and (min-width:500px) {
+    .home{
+        flex-direction: column;
+    }
+    .heading{
+        font-size: 30px;
+       
+    }
+    .text{
+        font-size: 18px;
+        
+    }
+    .banner-img,.banner-img img{
+        display:flex;
+        align-items: flex-end;
+        justify-content: center;
+        height: 350px;
+        width: 100%;
+    }
+    button{
+        margin:5px;
+        padding:5px;
+        font-size: 18px;
+        font-weight: 500;
+        border-radius: 10px;
+      
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .home{
+        flex-direction: column;
+    }
+    .heading{
+        font-size: 25px;
+        font-weight: 800;
+    }
+    .text{
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .banner-img,.banner-img img{
+        display:flex;
+        align-items: flex-end;
+        justify-content: center;
+        height:200px;
+        width: 100%;
+    }
+    button{
+        margin:10px;
+        padding:5px;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 5px;
+      
+    }
+}
