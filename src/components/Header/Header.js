@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import {Link } from 'react-router-dom';
 import {useDispatch} from 'react-redux';
+import {useNavigate} from 'react-router-dom';
 
 import user from '../../images/user1.png';
 import { fetchAsyncMovies ,fetchAsyncShows } from '../../features/movies/movieSlice';
@@ -8,11 +9,13 @@ import './Header.scss';
 function Header() {
 
     const dispatch = useDispatch();
-
+    const navigate = useNavigate();
+    
     const [term ,setTerm] = useState("");
     const submitHandler = (e) => {
         e.preventDefault();
         if(term === "") return alert("Please Enter Movie or Show")
+        navigate('/');
         dispatch(fetchAsyncMovies(term));
         dispatch(fetchAsyncShows(term));
         setTerm("");
