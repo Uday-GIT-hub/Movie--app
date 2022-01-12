@@ -22,8 +22,10 @@ function MovieDetail() {
             {Object.keys(data).length === 0 ? (<div><h1>...Loading</h1></div>) :
             (
             <>
+                
                 <div className="section-left">
                     <div className="movie-title">{Title}</div>
+                    
                     <div className="movie-rating">
                         <span>
                             IMDB Rating <i className="fa fa-star"></i> : {imdbRating}
@@ -37,6 +39,9 @@ function MovieDetail() {
                         <span>
                             Year <i className="fa fa-calendar"></i> : {Year}
                         </span>
+                    </div>
+                    <div className="after-section-left">
+                        <img src={Poster} alt={Title}/>
                     </div>
                     <div className="movie-plot">{Plot}</div>
                     <div className="movie-info">
@@ -63,7 +68,7 @@ function MovieDetail() {
                     
                     </div>
                 </div>
-                <div className="section-left">
+                <div className="section-right">
                     <img src={Poster} alt={Title}/>
                 </div>
             </>

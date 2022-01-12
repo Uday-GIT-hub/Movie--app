@@ -2,7 +2,7 @@
 
 .header{
     background-color: $secondary-color;
-    height:72px;
+    height:80px;
     padding:0px 40px;
     display:flex;
     align-items: center;
@@ -24,4 +24,114 @@
 .search-bar {
     width: 50%;
     display:flex;
+    justify-content: center;
+    form {
+        display:flex;
+        justify-content: center;
+        width:75%;
+        button{
+            padding : 0 8px;
+            font-size: 20px;
+            cursor: pointer;
+            height: 38px;
+        }
+    }
+    input{
+        font-size: 18px;
+        padding : 5px 5px 5px 10px;
+        height:38px;
+        width:100%;
+        outline:none;
+    }
+}
+
+@media only screen and  (max-width :900px) {
+    .search-bar {
+        width: 50%;
+        display:flex;
+        justify-content: flex-start;
+        form {
+            display:flex;
+            justify-content: flex-start;
+            width:100%;
+            button{
+                padding : 0 5px;
+                outline: none;
+                border-radius: none;
+                font-size: 17px;
+                cursor: pointer;
+                height: 30px;
+            }
+        }
+        input{
+            margin-top:5px;
+            font-size: 15px;
+            padding : 5px;
+            height:30px;
+            width:100%;
+            outline:none;
+        }
+    }
+    
+}
+
+@media only screen and  (max-width :600px) {
+    .header{
+        background-color: $secondary-color;
+        height:80px;
+        padding:5px 10px;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between ;
+    }
+    
+    .logo{
+
+        color:$font-primary;
+        font-size: 20px;
+        font-weight: 600;
+        
+    }
+    
+    .user-image,.user-image img{
+       
+        display: none;
+    }
+    .search-bar {
+        width: 70%;
+        display:flex;
+        justify-content: flex-start;
+        form {
+            display:flex;
+            justify-content: flex-start;
+            width:100%;
+            button{
+                padding : 0 5px;
+                outline: none;
+                border-radius: none;
+                font-size: 16px;
+                cursor: pointer;
+                height: 30px;
+            }
+        }
+        input{
+            margin-top:5px;
+            font-size: 15px;
+            padding : 5px;
+            height:30px;
+            width:100%;
+            outline:none;
+        }
+    }
+    
+}
+@media only screen and  (max-width :500px) {
+    .search-bar {
+        width: 80%;
+        input{
+            margin-top:10px;
+            
+        }
+    }
 }

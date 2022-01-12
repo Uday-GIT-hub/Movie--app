@@ -1,6 +1,6 @@
 import React,{useEffect} from 'react';
 import banner from '../../images/banner3.jpg';
-import {Link} from 'react-router-dom';
+
 import './Home.scss'
 import MovieListing from '../MovieListing/MovieListing';
 import {fetchAsyncMovies,fetchAsyncShows} from '../../features/movies/movieSlice';
@@ -9,10 +9,12 @@ import {useDispatch} from 'react-redux';
 function Home() {
 
     const dispatch = useDispatch();
+    const seriesText = "Friends";
+    const MovieText = "Avengers";
 
     useEffect(()=> {
-        dispatch(fetchAsyncMovies());
-        dispatch(fetchAsyncShows());
+        dispatch(fetchAsyncMovies(MovieText));
+        dispatch(fetchAsyncShows(seriesText));
 
     },[dispatch])
 
@@ -27,7 +29,7 @@ function Home() {
                 <a href="#movies"><div><button className="watch-btn">Watch Now</button></div></a>
             </div>
             <div className="banner-img">
-                <img src={banner} alt="banner-image"/>
+                <img src={banner} alt="banner"/>
             </div>
         </div>
             <MovieListing />
