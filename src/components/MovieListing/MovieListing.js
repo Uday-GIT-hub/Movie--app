@@ -14,11 +14,11 @@ function MovieListing() {
 
     renderMovies = movies.Response === "True" ? 
     (movies.Search.map((movie,index) => 
-        {
+        (
             if(movie.Poster !== "N/A") 
                 return( <MovieCard key={index} data={movie} />)
            
-        })
+        ))
     ) : 
     (
         <div className="movies-error">
@@ -28,11 +28,11 @@ function MovieListing() {
 
     renderShows = shows.Response === "True" ? 
     (shows.Search.map((show,index) => 
-        {
+        (
             if(show.Poster !== "N/A") 
                 return( <MovieCard key={index} data={show} />)
            
-        })
+        ))
     ) : 
     (
         <div className="movies-error">
